@@ -1,11 +1,6 @@
 import org.ocera.orte.*;
-import org.ocera.orte.types.*;
 
-public class MyManager {
-
-  static {
-    System.loadLibrary("jorte");
-  }
+public class ExampleManager {
 
   public static void main(String[] args) {
     Manager manager = new Manager();
@@ -13,11 +8,10 @@ public class MyManager {
     while(true) {
       try {
         Thread.sleep(1000);
-      }
-      catch(Exception e) {
+      } catch(Exception e) {
         e.printStackTrace();
       }
     }
   }
-
 }
+
