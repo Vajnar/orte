@@ -1,0 +1,2 @@
+include ':libaorte'
+include ':shape_android'
