@@ -140,7 +140,7 @@ public class MainActivity extends Activity {
     		crane_cmd.cancel();
     	}
     	
-    	if (magnet_cmd != null && !crane_cmd.isCancelled()) {
+    	if (magnet_cmd != null && !magnet_cmd.isCancelled()) {
     		magnet_cmd.cancel();
     	}
     	
