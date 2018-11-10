@@ -1,0 +1,5 @@
+.gradle/
+.idea/
+shape_android.iml
+shape_android/build/
+shape_android/shape_android-shape_android.iml
