@@ -84,7 +84,6 @@ public class MainActivity extends Activity {
     private SensorManager mSensorManager = null;
     private Sensor mGravity = null;
     private SensorEventListener accel = null;
-    private PowerManager mPowerManager = null;
     private WifiManager mWifiManager = null;
     private WakeLock mWakeLock = null;
     private WakeLock mDimLock = null;
@@ -160,7 +159,7 @@ public class MainActivity extends Activity {
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.hokuyo_view);
         
-        mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        PowerManager mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
         mWakeLock = mPowerManager.newWakeLock(
         		PowerManager.SCREEN_BRIGHT_WAKE_LOCK,
         		getClass().getName() + " Bright");
@@ -168,7 +167,7 @@ public class MainActivity extends Activity {
         		PowerManager.SCREEN_DIM_WAKE_LOCK,
         		getClass().getName() + " Dim");
 
-        mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        mWifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         mWifiLock = mWifiManager.createWifiLock(
         		android.os.Build.VERSION.SDK_INT >= 12
         		? WifiManager.WIFI_MODE_FULL_HIGH_PERF
